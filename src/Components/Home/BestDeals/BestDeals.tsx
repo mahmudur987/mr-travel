@@ -19,11 +19,11 @@ const BestDeals = () => {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-5 my-20  max-w-7xl mx-auto">
+    <div className=" flex flex-col-reverse lg:grid lg:grid-cols-2 gap-5 my-20  max-w-7xl mx-auto">
       {/* left */}
-      <div className="grid grid-cols-2 gap-3 h-[800px]">
+      <div className="grid md:grid-cols-2 gap-3 h-[800px]">
         {/* no 1 div */}
-        <div className="col-span-2 row-span-2 h-full ">
+        <div className="md:col-span-2 row-span-2 h-full ">
           <Link href={`/eventDetails/${datas[0].id}`}>
             <div
               style={{
@@ -114,7 +114,7 @@ const BestDeals = () => {
       </div>
 
       {/* right */}
-      <div className="flex flex-col gap-8 items-center justify-between h-[800px]">
+      <div className="flex flex-col gap-8 items-center justify-between lg:h-[800px]">
         <div className=" flex flex-col gap-8 items-center justify-center">
           <h1 className="text-4xl font-bold uppercase">Best deals</h1>
           <p>
@@ -123,7 +123,7 @@ const BestDeals = () => {
             laborum adipisci.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-5 ">
+        <div className="grid md:grid-cols-2 gap-5 ">
           {/* no 1 div */}
           <div className="row-span-2 min-h-full ">
             <div className=" h-full ">

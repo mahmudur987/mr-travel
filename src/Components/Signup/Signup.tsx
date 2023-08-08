@@ -7,6 +7,7 @@ import { useMutation, useQuery } from "@apollo/client";
 import { ADD_USER } from "@/mutations/userMutaion";
 import { toast } from "react-toastify";
 import { toastObj } from "../shared/Toast/toastObject";
+import { USERS } from "@/queries/userQuery";
 
 const Signup = () => {
   const {
@@ -69,6 +70,7 @@ const Signup = () => {
       .then(() => {
         addUser({
           variables: data,
+          refetchQueries: [{ query: USERS }],
         });
         toast.success("user signup successfully", toastObj);
         Setloading(false);

@@ -12,9 +12,12 @@ const WhyChooseUs = () => {
           Here are reasons you should plan trip with us
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center w-full gap-4 my-5 ">
         {ChooseData.map((data, i) => (
-          <div key={i} className="card card-compact w-96 bg-base-100 shadow-xl">
+          <div
+            key={i}
+            className="card card-compact  bg-base-100 shadow-xl mx-auto"
+          >
             <figure>
               <img className="h-32 w-32" src={data.imageUrl} alt="Shoes" />
             </figure>

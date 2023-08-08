@@ -2,9 +2,9 @@ import React from "react";
 
 const Continents = () => {
   return (
-    <div className="grid grid-cols-2 gap-5 max-w-7xl my-5 mx-auto">
+    <div className="container grid md:grid-cols-2 gap-5 max-w-7xl my-5 mx-auto">
       {/* left */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid md:grid-cols-2 gap-5">
         <div
           style={{
             backgroundImage:
@@ -42,7 +42,7 @@ const Continents = () => {
 
       {/* right */}
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid md:grid-cols-2 gap-5">
         <div
           style={{
             backgroundImage:

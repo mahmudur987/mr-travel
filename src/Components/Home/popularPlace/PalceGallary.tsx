@@ -21,7 +21,7 @@ const PlaceGallery: React.FC = () => {
           Worlds best tourist destinations
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 my-5">
         {places.map((place, i) => (
           <div
             style={{

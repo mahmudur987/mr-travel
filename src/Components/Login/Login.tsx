@@ -7,7 +7,7 @@ import { toastObj } from "../shared/Toast/toastObject";
 import { useRouter } from "next/navigation";
 import { useMutation, useQuery } from "@apollo/client";
 import { ADD_USER } from "@/mutations/userMutaion";
-import { GET_USER } from "@/queries/userQuery";
+import { GET_USER, USERS } from "@/queries/userQuery";
 
 const Login = () => {
   const {
@@ -53,6 +53,7 @@ const Login = () => {
         };
         addUser({
           variables: ProfileData,
+          refetchQueries: [{ query: USERS }],
         });
         toast.success("you have log In successfully", toastObj);
         router.push("/");

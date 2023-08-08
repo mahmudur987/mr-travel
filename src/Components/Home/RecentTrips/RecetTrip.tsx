@@ -13,7 +13,7 @@ const RecetTrip = ({ data }) => {
 
   return (
     <div className="rounded overflow-hidden shadow-xl p-2">
-      <Link href={`eventDetails/${data.id}`}>
+      <Link href={`/eventDetails/${data.id}`}>
         <div className="relative">
           <img
             className="w-full h-48 object-cover rounded-lg"

@@ -22,3 +22,25 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const UPDATE_USER = gql`
+  mutation UpdateUser($id: ID!, $phoneNumber: String!, $address: String!) {
+    updateUser(id: $id, phoneNumber: $phoneNumber, address: $address) {
+      id
+      name
+      email
+      phoneNumber
+      address
+    }
+  }
+`;
+export const REMOVE_USER = gql`
+  mutation DeleteUser($id: ID!) {
+    deleteUser(id: $id) {
+      id
+      name
+      email
+      phoneNumber
+      address
+    }
+  }
+`;

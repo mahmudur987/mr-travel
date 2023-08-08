@@ -16,7 +16,7 @@ const Home = () => {
       <Head>
         <title>MR-TRavel</title>
       </Head>
-      <main>
+      <main className="container mx-auto">
         <Banner />
         <Continents />
         <BestDeals />

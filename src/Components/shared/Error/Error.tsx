@@ -1,6 +1,6 @@
-const Error = ({ message }) => {
+const Error = ({ message }: { message: String }) => {
   return (
-    <div className="bg-red-500 text-white p-4 rounded-md">
+    <div className="bg-red-500 text-white p-4 rounded-md ">
       <p>{message}</p>
       <p>some Error happen</p>
     </div>

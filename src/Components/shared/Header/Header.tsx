@@ -2,6 +2,7 @@ import { AuthContext } from "@/Context/UserContext";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
+import { AiOutlineMenuFold } from "react-icons/ai";
 
 const Header = ({ user, logout }) => {
   const { pathname } = useRouter();
@@ -12,10 +13,10 @@ const Header = ({ user, logout }) => {
         <Link href={"/"}>Home</Link>
       </li>
       <li>
-        <Link href={"/"}>Dashboard</Link>
+        <Link href={"/dashboard/profile"}>Dashboard</Link>
       </li>
       <li>
-        <Link href={"/"}>Blog</Link>
+        <Link href={"/blog"}>Blog</Link>
       </li>
       <li>
         <Link href={"/"}>About us</Link>
@@ -69,7 +70,7 @@ const Header = ({ user, logout }) => {
       <div className=" ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            menu
+            <AiOutlineMenuFold />
           </label>
           <ul
             tabIndex={0}

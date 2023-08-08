@@ -22,7 +22,8 @@ export const GET_EVENTS = gql`
       nonBookedSeats
       bookedmember {
         id
-        name
+        userId
+        userName
       }
       description
       price
@@ -56,7 +57,43 @@ export const GET_EVENT = gql`
       nonBookedSeats
       bookedmember {
         id
-        name
+        userId
+        userName
+      }
+      description
+      price
+      publishDate
+      price
+      endDate
+      startDate
+      bestDeals
+    }
+  }
+`;
+export const GET_EVENT_BY_BOOKING_ID = gql`
+  query GetEventsByBookingId($id: ID!) {
+    getEventsbyBookingUserId(id: $id) {
+      id
+      name
+      pictures
+      destination {
+        country
+        state
+        city
+        district
+      }
+      planing {
+        time
+        description
+        picture
+      }
+      spots
+      maxMembers
+      nonBookedSeats
+      bookedmember {
+        id
+        userId
+        userName
       }
       description
       price
