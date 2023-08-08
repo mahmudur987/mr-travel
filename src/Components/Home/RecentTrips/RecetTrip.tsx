@@ -1,15 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { FiUsers } from "react-icons/fi";
 import { BsClockFill } from "react-icons/bs";
 import Link from "next/link";
-const RecetTrip = ({ data }) => {
+const RecetTrip = ({ data }: any) => {
   const oneDay = 24 * 60 * 60 * 1000;
   const start = new Date(data.startDate);
   const end = new Date();
   const timeDifference = Math.abs(end - start);
   const days = Math.floor(timeDifference / oneDay);
-
-  //   console.log(start, end);
 
   return (
     <div className="rounded overflow-hidden shadow-xl p-2">
