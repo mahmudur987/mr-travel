@@ -4,8 +4,10 @@ import { useMutation } from "@apollo/client";
 import { UPDATE_USER } from "@/mutations/userMutaion";
 import { toast } from "react-toastify";
 import { toastObj } from "@/Components/shared/Toast/toastObject";
-
-const ProfilePage: React.FC = ({ user }: {}) => {
+interface ProfilePageProps {
+  user: any; // Replace 'any' with the actual type of 'user' if possible
+}
+const ProfilePage: React.FC<ProfilePageProps> = ({ user }: any) => {
   const [phoneNumber, setPhoneNumber] = useState(user.phoneNumber);
   const [address, setAddress] = useState(user.address);
   const [isModalOpen, setIsModalOpen] = useState(false);

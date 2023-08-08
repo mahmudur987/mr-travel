@@ -18,7 +18,7 @@ const Allusers = () => {
       {data && (
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-5">
-            {data?.users.map((user, i) => (
+            {data?.users.map((user: any, i: React.Key | null | undefined) => (
               <User key={i} user={user} />
             ))}
           </div>

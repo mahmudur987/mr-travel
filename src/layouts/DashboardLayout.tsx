@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaHamburger } from "react-icons/fa";
 
-const DashboardLayout = ({ children }) => {
+const DashboardLayout = ({ children }: any) => {
   const [userData] = UsesaveUsere();
   const [show, setShow] = useState(false);
 

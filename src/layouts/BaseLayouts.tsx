@@ -4,7 +4,7 @@ import { AuthContext } from "@/Context/UserContext";
 import Head from "next/head";
 import React, { useContext } from "react";
 
-const BaseLayouts = ({ children }) => {
+const BaseLayouts = ({ children }: any) => {
   const { user, logout } = useContext(AuthContext);
 
   return (

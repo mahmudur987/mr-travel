@@ -5,7 +5,7 @@ import React from "react";
 import { toastObj } from "@/Components/shared/Toast/toastObject";
 import { USERS } from "@/queries/userQuery";
 
-const User = ({ user }) => {
+const User = ({ user }: any) => {
   const { id, name, email, phoneNumber, address, photoURL } = user;
   //   console.log(id);
   const [deleteUser] = useMutation(REMOVE_USER);
@@ -16,7 +16,7 @@ const User = ({ user }) => {
         refetchQueries: [{ query: USERS }],
       });
       toast("user has been removed successfully", toastObj);
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       toast.error(error.message);
     }

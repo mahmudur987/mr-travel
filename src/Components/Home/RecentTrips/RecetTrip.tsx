@@ -5,10 +5,10 @@ import { BsClockFill } from "react-icons/bs";
 import Link from "next/link";
 const RecetTrip = ({ data }: any) => {
   const oneDay = 24 * 60 * 60 * 1000;
-  const start = new Date(data.startDate);
-  const end = new Date();
-  const timeDifference = Math.abs(end - start);
-  const days = Math.floor(timeDifference / oneDay);
+  const start: Date = new Date(data.startDate);
+  const end: Date = new Date();
+  const timeDifference: number = Math.abs(end.getTime() - start.getTime());
+  const days: number = Math.floor(timeDifference / oneDay);
 
   return (
     <div className="rounded overflow-hidden shadow-xl p-2">

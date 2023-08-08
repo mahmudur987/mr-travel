@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { AuthContext } from "@/Context/UserContext";
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
@@ -5,9 +6,9 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { toastObj } from "../shared/Toast/toastObject";
 import { useRouter } from "next/navigation";
-import { useMutation, useQuery } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import { ADD_USER } from "@/mutations/userMutaion";
-import { GET_USER, USERS } from "@/queries/userQuery";
+import { USERS } from "@/queries/userQuery";
 
 const Login = () => {
   const {
@@ -19,7 +20,7 @@ const Login = () => {
   const { login, googleLogIn, user } = useContext(AuthContext);
   const [addUser] = useMutation(ADD_USER);
   const router = useRouter();
-  const handleLogin = (data) => {
+  const handleLogin = (data: any) => {
     login(data.email, data.password)
       .then((result) => {
         const user = result.user;
@@ -84,7 +85,7 @@ const Login = () => {
               placeholder="Email"
               className="input input-bordered w-full mx-auto lg:w-2/3"
             />
-            {errors.email && <p role="alert">{errors.email?.message}</p>}
+            {errors.email && <p role="alert">this is required</p>}
           </div>
           <div className="form-control w-full text-center  ">
             <label className="label mx-auto">
@@ -102,7 +103,7 @@ const Login = () => {
               placeholder="Password"
               className="input input-bordered w-full mx-auto lg:w-2/3"
             />
-            {errors.password && <p role="alert">{errors.password?.message}</p>}
+            {errors.password && <p role="alert">this is required</p>}
           </div>
 
           <label className="label text-center">

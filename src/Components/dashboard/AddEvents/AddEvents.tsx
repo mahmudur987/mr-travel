@@ -82,7 +82,7 @@ const AddEvents = () => {
   // };
 
   const onSubmit = async (data: any) => {
-    const spots = data.spots.map((x) => x.spots);
+    const spots = data.spots.map((x: any) => x.spots);
     if (spots.length < 1) {
       return toast("please add spots name", toastObj);
     }
@@ -114,7 +114,7 @@ const AddEvents = () => {
       console.log("Event added");
       toast.success("event added ", toastObj);
       reset();
-    } catch (error: { message: string }) {
+    } catch (error: any) {
       console.error("Error adding event:", error);
       toast.error(error.message, toastObj);
     }

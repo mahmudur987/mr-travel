@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ChooseData } from "@/data/whychooseusdata";
 import React from "react";
 

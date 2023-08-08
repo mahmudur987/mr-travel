@@ -17,15 +17,7 @@ const BlogPage: React.FC = () => {
         </h1>
         <div className="flex flex-col mx-auto max-w-7xl gap-20">
           {blogData.map(
-            (blog: {
-              title: string;
-              content: {
-                tip: string;
-                description: string;
-              }[];
-              rating: number;
-              likes: number;
-            }) => (
+            (blog: any) => (
               <BlogPost
                 key={blog.title}
                 title={blog.title}

@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import { AuthContext } from "@/Context/UserContext";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import { AiOutlineMenuFold } from "react-icons/ai";
 
-const Header = ({ user, logout }) => {
+const Header = ({ user, logout }: any) => {
   const { pathname } = useRouter();
   const NavItems = (
     <>
@@ -30,8 +31,8 @@ const Header = ({ user, logout }) => {
             <button
               onClick={() => {
                 logout()
-                  .then((res) => {})
-                  .catch((err) => console.error(err));
+                  .then(() => {})
+                  .catch((err: any) => console.error(err));
               }}
             >
               LogOut

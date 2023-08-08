@@ -6,8 +6,8 @@ import { AiFillStar } from "react-icons/ai";
 interface BlogPostProps {
   title: string;
   content: [];
-  likes: Number;
-  rating: Number;
+  likes: number;
+  rating: number;
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({
@@ -20,7 +20,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
   const [Likes, setLikes] = useState(likes);
 
   const handleLike = () => {
-    setLikes((prevLikes) => prevLikes + 1);
+    setLikes(Likes + 1);
   };
 
   return (

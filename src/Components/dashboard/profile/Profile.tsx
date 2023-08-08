@@ -106,7 +106,7 @@ const Profile = () => {
               {/* Add other social media links here */}
             </div>
             <div className=" flex justify-end">
-              <ProfilePage user={userData?.user} />
+              {userData?.user && <ProfilePage user={userData?.user} />}
             </div>
           </div>
         </div>

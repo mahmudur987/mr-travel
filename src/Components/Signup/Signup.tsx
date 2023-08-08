@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { AuthContext } from "@/Context/UserContext";
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
@@ -20,14 +21,7 @@ const Signup = () => {
     useContext(AuthContext);
   const [addUser] = useMutation(ADD_USER);
 
-  const handleSignUp = (data: {
-    photo: any;
-    email: any;
-    password: any;
-    name: any;
-    phoneNumber: any;
-    address: any;
-  }) => {
+  const handleSignUp = (data: any) => {
     Setloading(true);
 
     const image = data.photo[0];
@@ -64,7 +58,7 @@ const Signup = () => {
       });
   };
 
-  const updateProfile = (data) => {
+  const updateProfile = (data: any) => {
     const profile = { displayName: data.name, photoURL: data.photoURL };
     updateUserProfile(profile)
       .then(() => {
@@ -117,7 +111,7 @@ const Signup = () => {
                   placeholder="Name"
                   className="input input-bordered w-full  "
                 />
-                {errors.name && <p role="alert">{errors.name?.message}</p>}
+                {errors.name && <p role="alert"> this is required</p>}
               </div>
               {/* photo */}
               <div className="form-control w-full  ">
@@ -134,7 +128,7 @@ const Signup = () => {
                 />
                 {errors.name && (
                   <p className="text-red-600" role="alert">
-                    {errors.photo?.message}
+                    this is required
                   </p>
                 )}
               </div>
@@ -153,7 +147,7 @@ const Signup = () => {
                 />
                 {errors.phoneNumber && (
                   <p className="text-red-600" role="alert">
-                    {errors.phoneNumber.message}
+                    this is required
                   </p>
                 )}
               </div>
@@ -173,7 +167,7 @@ const Signup = () => {
                 />
                 {errors.phoneNumber && (
                   <p className="text-red-600" role="alert">
-                    {errors.address.message}
+                    this is required
                   </p>
                 )}
               </div>
@@ -194,7 +188,7 @@ const Signup = () => {
                 />
                 {errors.email && (
                   <p className="text-red-600" role="alert">
-                    {errors.email.message}
+                    this is required
                   </p>
                 )}
               </div>
@@ -216,7 +210,7 @@ const Signup = () => {
 
                 {errors.password && (
                   <p className="text-red-600" role="alert">
-                    {errors.password?.message}
+                    this is required
                   </p>
                 )}
               </div>

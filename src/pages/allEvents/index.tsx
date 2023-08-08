@@ -1,10 +1,8 @@
+import React from "react";
 import Error from "@/Components/shared/Error/Error";
 import LoadingSpinner from "@/Components/shared/Loading/Spiner";
 import { GET_EVENTS } from "@/queries/eventQueries";
 import { useQuery } from "@apollo/client";
-import React from "react";
-
-import Link from "next/link";
 import RecetTrip from "@/Components/Home/RecentTrips/RecetTrip";
 import BaseLayouts from "@/layouts/BaseLayouts";
 
@@ -21,9 +19,6 @@ const AllEvents = () => {
     (a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
   );
 
-  // console.log(new Date(datas[0].startDate).toUTCString())
-
-  // console.log(datas);
   return (
     <BaseLayouts>
       <div className="my-5 mx-auto max-w-7xl">
