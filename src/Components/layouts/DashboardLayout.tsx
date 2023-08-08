@@ -40,23 +40,27 @@ const DashboardLayout = ({ children }: any) => {
     </>
   );
   return (
-    <div className=" relative min-h-screen">
+    <div className="relative min-h-screen">
       <div className="flex min-h-screen gap-3 ">
-        <button
-          onClick={() => setShow(!show)}
-          className=" md:hidden absolute top-0 ml-2"
-        >
-          <FaHamburger />
-        </button>
-        {show && (
-          <div className="absolute top-0 mt-5 z-10  bg-base-100 p-4 text-red-500">
-            {menuItems}
-          </div>
-        )}
-        <div className="border shadow-xl w-1/5 md:flex justify-center hidden ">
-          <div className="mt-5   ">{menuItems}</div>
+        <div>
+          <label
+            onClick={() => setShow(!show)}
+            tabIndex={0}
+            className="btn btn-ghost md:hidden absolute z-10  "
+          >
+            <FaHamburger />
+          </label>
+
+          {show && (
+            <div className="absolute top-5 mt-5 z-10  bg-base-100 p-4 ">
+              {menuItems}
+            </div>
+          )}
         </div>
-        <div className="flex flex-grow w-full ">{children}</div>
+        <div className="border shadow-xl w-1/5 hidden md:flex justify-center m-1  ">
+          <div className="mt-5 ">{menuItems}</div>
+        </div>
+        <div className="flex flex-grow w-full mt-10 ">{children}</div>
       </div>
     </div>
   );

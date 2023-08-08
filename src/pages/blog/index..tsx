@@ -3,7 +3,7 @@ import React from "react";
 import Head from "next/head";
 import { blogData } from "@/data/blogdata";
 import BlogPost from "@/Components/blog/BlogPost";
-import BaseLayouts from "@/layouts/BaseLayouts";
+import BaseLayouts from "@/Components/layouts/BaseLayouts";
 
 const BlogPage: React.FC = () => {
   return (
@@ -16,17 +16,15 @@ const BlogPage: React.FC = () => {
           Our Blogs
         </h1>
         <div className="flex flex-col mx-auto max-w-7xl gap-20">
-          {blogData.map(
-            (blog: any) => (
-              <BlogPost
-                key={blog.title}
-                title={blog.title}
-                content={blog.content}
-                rating={blog.rating}
-                likes={blog.likes}
-              />
-            )
-          )}
+          {blogData.map((blog: any) => (
+            <BlogPost
+              key={blog.title}
+              title={blog.title}
+              content={blog.content}
+              rating={blog.rating}
+              likes={blog.likes}
+            />
+          ))}
         </div>
       </div>
     </BaseLayouts>

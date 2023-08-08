@@ -57,12 +57,12 @@ const Profile = () => {
                 Address {address ? address : "please add your address"}
               </p>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               <a
                 href={profile.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 flex items-center"
+                className="text-blue-800 flex items-center"
               >
                 <FontAwesomeIcon icon={faFacebook} className="mr-2" />
                 Facebook

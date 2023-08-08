@@ -3,7 +3,7 @@ import { UsesaveUsere } from "@/Components/hooks/saveUserHook";
 
 import LoadingSpinner from "@/Components/shared/Loading/Spiner";
 import { toastObj } from "@/Components/shared/Toast/toastObject";
-import BaseLayouts from "@/layouts/BaseLayouts";
+import BaseLayouts from "@/Components/layouts/BaseLayouts";
 import { ADD_MEMBER_TO_EVENT } from "@/mutations/eventMutation";
 import { GET_EVENT } from "@/queries/eventQueries";
 import { useMutation, useQuery } from "@apollo/client";

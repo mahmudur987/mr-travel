@@ -1,6 +1,6 @@
 import Allusers from "@/Components/dashboard/Allusers/Allusers";
-import BaseLayouts from "@/layouts/BaseLayouts";
-import DashboardLayout from "@/layouts/DashboardLayout";
+import BaseLayouts from "@/Components/layouts/BaseLayouts";
+import DashboardLayout from "@/Components/layouts/DashboardLayout";
 import React from "react";
 
 const alluser = () => {

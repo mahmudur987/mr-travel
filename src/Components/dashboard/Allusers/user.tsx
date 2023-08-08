@@ -7,7 +7,7 @@ import { toastObj } from "@/Components/shared/Toast/toastObject";
 import { USERS } from "@/queries/userQuery";
 
 const User = ({ user }: any) => {
-  const { id, name, email, phoneNumber, address, photoURL } = user;
+  const { id, name, email, phoneNumber, address, photoURL, role } = user;
   //   console.log(id);
   const [deleteUser] = useMutation(REMOVE_USER);
   const handleDeleteUser = async () => {
@@ -39,8 +39,9 @@ const User = ({ user }: any) => {
                   Phone Number : {phoneNumber}
                 </p>
                 <p className="text-gray-600 mb-4">
-                  Address {address ? address : "please add your address"}
+                  Address : {address ? address : "please add your address"}
                 </p>
+                <p className="text-gray-600 mb-4">Role : {role}</p>
               </div>
               <div className="flex justify-between">
                 <button className="btn btn-info btn-sm">Make Admin</button>

@@ -63,7 +63,7 @@ const Login = () => {
   };
 
   return (
-    <section className="bg-base-200 font-bold md:flex">
+    <section className="font-bold md:flex">
       <div className="md:w-1/2  md:mx-5 flex items-center  ">
         <img
           className="h-96 mx-auto "
@@ -74,6 +74,9 @@ const Login = () => {
 
       <div className=" my-10 md:w-1/2 ">
         <h1 className="text-4xl text-center font bold mb-10"> LOG IN</h1>
+
+        <p>admin email:mahmud@gmail.com</p>
+        <p>admin password:123456</p>
         <form className="" onSubmit={handleSubmit(handleLogin)}>
           <div className="form-control w-full text-center ">
             <label className="label mx-auto">

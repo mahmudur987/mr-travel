@@ -24,7 +24,7 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ user }: any) => {
       if (updatedUser) {
         toast("your profile update successfully", toastObj);
       }
-      console.log("User updated:", updatedUser);
+      // console.log("User updated:", updatedUser);
     } catch (error: any) {
       toast(error.message, toastObj);
     }

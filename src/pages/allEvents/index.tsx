@@ -4,7 +4,7 @@ import LoadingSpinner from "@/Components/shared/Loading/Spiner";
 import { GET_EVENTS } from "@/queries/eventQueries";
 import { useQuery } from "@apollo/client";
 import RecetTrip from "@/Components/Home/RecentTrips/RecetTrip";
-import BaseLayouts from "@/layouts/BaseLayouts";
+import BaseLayouts from "@/Components/layouts/BaseLayouts";
 
 const AllEvents = () => {
   const { loading, data, error } = useQuery(GET_EVENTS);

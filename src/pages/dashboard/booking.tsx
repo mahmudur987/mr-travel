@@ -1,6 +1,6 @@
 import React from "react";
-import BaseLayouts from "@/layouts/BaseLayouts";
-import DashboardLayout from "@/layouts/DashboardLayout";
+import BaseLayouts from "@/Components/layouts/BaseLayouts";
+import DashboardLayout from "@/Components/layouts/DashboardLayout";
 import Bookings from "@/Components/dashboard/Bookings/Bookings";
 
 const booking = () => {

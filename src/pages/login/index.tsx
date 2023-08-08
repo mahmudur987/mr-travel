@@ -1,5 +1,5 @@
 import Login from "@/Components/Login/Login";
-import BaseLayouts from "@/layouts/BaseLayouts";
+import BaseLayouts from "@/Components/layouts/BaseLayouts";
 import React from "react";
 
 const LogInPage = () => {
