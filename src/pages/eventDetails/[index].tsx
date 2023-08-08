@@ -9,7 +9,7 @@ import { GET_EVENT } from "@/queries/eventQueries";
 import { useMutation, useQuery } from "@apollo/client";
 
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { toast } from "react-toastify";
 
 const EventDetails = () => {
@@ -128,7 +128,7 @@ const EventDetails = () => {
                   plan: {
                     time: string;
                     description: string;
-                    picture: String;
+                    picture: string;
                   },
                   i: React.Key | null | undefined
                 ) => (
