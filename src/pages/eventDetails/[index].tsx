@@ -54,7 +54,7 @@ const EventDetails = () => {
       });
 
       toast.success("You have join to the event successfully!", toastObj);
-    } catch (er: { message: String }) {
+    } catch (er: any) {
       toast.error(er.message, toastObj);
       console.log("Error adding member to the event:", er.message);
     }
