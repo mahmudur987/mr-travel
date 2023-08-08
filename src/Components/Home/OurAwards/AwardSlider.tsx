@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // components/AwardsSlider.tsx
 import React from "react";
 import Slider from "react-slick";

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { REMOVE_USER } from "@/mutations/userMutaion";
 import { useMutation } from "@apollo/client";
 import { toast } from "react-toastify";
