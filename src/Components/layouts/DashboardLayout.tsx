@@ -1,7 +1,7 @@
 import { UsesaveUsere } from "@/Components/hooks/saveUserHook";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { FaHamburger } from "react-icons/fa";
 import { toast } from "react-toastify";
 
@@ -47,10 +47,12 @@ const DashboardLayout = ({ children }: any) => {
     </>
   );
 
-  if (!user) {
-    toast("please login first");
-    router.push("/login");
-  }
+  useEffect(() => {
+    if (!user) {
+      toast("please login first");
+      router.push("/login");
+    }
+  }, [user, router]);
 
   return (
     <>
