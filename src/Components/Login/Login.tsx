@@ -5,7 +5,7 @@ import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { toastObj } from "../shared/Toast/toastObject";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "@/mutations/userMutaion";
 import { USERS } from "@/queries/userQuery";
