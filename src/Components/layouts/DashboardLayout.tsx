@@ -1,12 +1,19 @@
 import { UsesaveUsere } from "@/Components/hooks/saveUserHook";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useState, useContext } from "react";
 import { FaHamburger } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { toastObj } from "../shared/Toast/toastObject";
+import { AuthContext } from "@/Context/UserContext";
 
 const DashboardLayout = ({ children }: any) => {
+  const router = useRouter();
   const [userData] = UsesaveUsere();
-  const [show, setShow] = useState(false);
+  const { user } = useContext(AuthContext);
 
+  const [show, setShow] = useState(false);
+  console.log(userData);
   const menuItems = (
     <>
       {" "}
@@ -39,30 +46,39 @@ const DashboardLayout = ({ children }: any) => {
       </ul>
     </>
   );
-  return (
-    <div className="relative min-h-screen">
-      <div className="flex min-h-screen gap-3 ">
-        <div>
-          <label
-            onClick={() => setShow(!show)}
-            tabIndex={0}
-            className="btn btn-ghost md:hidden absolute z-10  "
-          >
-            <FaHamburger />
-          </label>
 
-          {show && (
-            <div className="absolute top-5 mt-5 z-10  bg-base-100 p-4 ">
-              {menuItems}
+  if (!user) {
+    toast("please login first");
+    router.push("/login");
+  }
+
+  return (
+    <>
+      {userData && (
+        <div className="relative min-h-screen">
+          <div className="flex min-h-screen gap-3 ">
+            <div>
+              <label
+                onClick={() => setShow(!show)}
+                className="btn btn-ghost md:hidden absolute"
+              >
+                <FaHamburger />
+              </label>
+
+              {show && (
+                <div className="absolute top-5 mt-5 z-10  bg-base-100 p-4 ">
+                  {menuItems}
+                </div>
+              )}
             </div>
-          )}
+            <div className="border shadow-xl w-1/5 hidden md:flex justify-center m-1  ">
+              <div className="mt-5 ">{menuItems}</div>
+            </div>
+            <div className="flex flex-grow w-full mt-10 ">{children}</div>
+          </div>
         </div>
-        <div className="border shadow-xl w-1/5 hidden md:flex justify-center m-1  ">
-          <div className="mt-5 ">{menuItems}</div>
-        </div>
-        <div className="flex flex-grow w-full mt-10 ">{children}</div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

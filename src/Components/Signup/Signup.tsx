@@ -9,8 +9,10 @@ import { ADD_USER } from "@/mutations/userMutaion";
 import { toast } from "react-toastify";
 import { toastObj } from "../shared/Toast/toastObject";
 import { USERS } from "@/queries/userQuery";
+import { useRouter } from "next/router";
 
 const Signup = () => {
+  const router = useRouter();
   const {
     register,
     formState: { errors },
@@ -67,6 +69,7 @@ const Signup = () => {
           refetchQueries: [{ query: USERS }],
         });
         toast.success("user signup successfully", toastObj);
+        router.push("/");
         Setloading(false);
       })
       .catch((err) => {

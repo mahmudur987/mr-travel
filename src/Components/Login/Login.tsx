@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { AuthContext } from "@/Context/UserContext";
 import { GoogleAuthProvider } from "firebase/auth";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { toastObj } from "../shared/Toast/toastObject";
@@ -20,6 +20,7 @@ const Login = () => {
   const { login, googleLogIn, user } = useContext(AuthContext);
   const [addUser] = useMutation(ADD_USER);
   const router = useRouter();
+
   const handleLogin = (data: any) => {
     login(data.email, data.password)
       .then((result) => {

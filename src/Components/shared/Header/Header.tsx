@@ -75,7 +75,7 @@ const Header = ({ user, logout }: any) => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 uppercase bg-base-100"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 uppercase bg-base-100 text-black"
           >
             {NavItems}
           </ul>
