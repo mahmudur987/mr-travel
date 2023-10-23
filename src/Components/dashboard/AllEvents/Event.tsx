@@ -177,7 +177,7 @@ const Event = ({ event: travelData }: any) => {
           <p className="flex justify-end gap-3">
             <button className="btn btn-primary">Update</button>
             <button
-              onClick={() => handleDeleteUser(id)}
+              onClick={() => handleDeleteUser()}
               className="btn btn-secondary"
             >
               Delete
