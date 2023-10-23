@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { toastObj } from "../shared/Toast/toastObject";
 import { USERS } from "@/queries/userQuery";
 import { useRouter } from "next/router";
+import Token from "@/data/token";
 
 const Signup = () => {
   const router = useRouter();
@@ -18,7 +19,6 @@ const Signup = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-
   const { signUp, updateUserProfile, Setloading, loading, user, logout } =
     useContext(AuthContext);
   const [addUser] = useMutation(ADD_USER);
@@ -42,6 +42,7 @@ const Signup = () => {
           const photoURL = imagedata.data.display_url;
           signUp(data.email, data.password)
             .then((result: any) => {
+              localStorage.setItem("token", Token);
               const ProfileData = {
                 name: data.name,
                 email: data.email,

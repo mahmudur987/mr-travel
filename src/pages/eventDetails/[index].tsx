@@ -183,7 +183,7 @@ const EventDetails = () => {
             {bestDeals && (
               <p className="text-2xl font-bold text-purple-800">
                 Price :{" "}
-                <span className="line-through m-0 p-0 text-lg">{price}</span>
+                <span className="line-through m-0 p-0 text-lg">{price} $</span>
                 <span className="font-bold m-0 p-0 text-xl">
                   ${parseInt(price.slice(1, 10)) - 500}
                 </span>
@@ -191,7 +191,7 @@ const EventDetails = () => {
             )}
             {!bestDeals && (
               <p className="text-2xl font-bold text-purple-800">
-                Price : <span className=" m-0 p-0 text-lg">{price}</span>
+                Price : <span className=" m-0 p-0 text-lg">{price} $</span>
               </p>
             )}
             <p className="text-end">

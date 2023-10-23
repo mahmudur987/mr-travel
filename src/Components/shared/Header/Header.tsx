@@ -31,7 +31,9 @@ const Header = ({ user, logout }: any) => {
             <button
               onClick={() => {
                 logout()
-                  .then(() => {})
+                  .then(() => {
+                    localStorage.clear();
+                  })
                   .catch((err: any) => console.error(err));
               }}
             >

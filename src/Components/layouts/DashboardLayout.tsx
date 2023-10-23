@@ -6,14 +6,14 @@ import { FaHamburger } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 import { AuthContext } from "@/Context/UserContext";
+import { toastObj } from "../shared/Toast/toastObject";
 
 const DashboardLayout = ({ children }: any) => {
   const router = useRouter();
   const [userData] = UsesaveUsere();
   const { user } = useContext(AuthContext);
-
   const [show, setShow] = useState(false);
-  console.log(userData);
+
   const menuItems = (
     <>
       {" "}
@@ -25,18 +25,18 @@ const DashboardLayout = ({ children }: any) => {
           <Link href={"/dashboard/profile"}>Profile</Link>
         </li>
         <li>
-          <Link href={"/dashboard/booking"}>My Bookings</Link>
+          <Link href={"/dashboard/booking"}> Bookings</Link>
         </li>
         <li>
-          <Link href={"/dashboard/joinedevent"}> Joined Event</Link>
+          <Link href={"/dashboard/joinedevent"}>Joined Event</Link>
         </li>
         {userData?.user.role === "admin" && (
           <>
             <li>
-              <Link href={"/dashboard/alluser"}> All Users</Link>
+              <Link href={"/dashboard/alluser"}> Users</Link>
             </li>
             <li>
-              <Link href={"/dashboard/allevent"}> All Event</Link>
+              <Link href={"/dashboard/allevent"}> Events</Link>
             </li>
             <li>
               <Link href={"/dashboard/addevent"}> Add Event</Link>
@@ -48,8 +48,12 @@ const DashboardLayout = ({ children }: any) => {
   );
 
   useEffect(() => {
-    if (!user) {
-      toast("please login first");
+    const token = localStorage.getItem("token");
+
+    console.log(token);
+
+    if (!token) {
+      toast("please login first", toastObj);
       router.push("/login");
     }
   }, [user, router]);

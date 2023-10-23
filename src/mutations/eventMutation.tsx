@@ -56,3 +56,12 @@ export const DESTINATION_INPUT = gql`
     district: String
   }
 `;
+
+export const DELETE_EVENT = gql`
+  mutation deleteEvent($id: ID!) {
+    deleteEvent(id: $id) {
+      id
+      name
+    }
+  }
+`;

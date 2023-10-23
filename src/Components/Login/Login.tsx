@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "@/mutations/userMutaion";
 import { USERS } from "@/queries/userQuery";
+import Token from "@/data/token";
 
 const Login = () => {
   const {
@@ -17,7 +18,7 @@ const Login = () => {
     handleSubmit,
   } = useForm();
 
-  const { login, googleLogIn, user } = useContext(AuthContext);
+  const { login, googleLogIn } = useContext(AuthContext);
   const [addUser] = useMutation(ADD_USER);
   const router = useRouter();
 
@@ -25,6 +26,7 @@ const Login = () => {
     login(data.email, data.password)
       .then((result) => {
         const user = result.user;
+        localStorage.setItem("token", Token);
         toast.success("You have Login successfully", toastObj);
         router.push("/");
       })
@@ -58,6 +60,8 @@ const Login = () => {
           refetchQueries: [{ query: USERS }],
         });
         toast.success("you have log In successfully", toastObj);
+        localStorage.setItem("token", Token);
+
         router.push("/");
       })
       .catch((err) => console.log("google login", err));
