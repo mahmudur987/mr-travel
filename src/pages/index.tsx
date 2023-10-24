@@ -15,6 +15,16 @@ const Home = () => {
     <>
       <Head>
         <title>MR-TRavel</title>
+        <meta property="og:title" content="MR-TRavel" />
+        <meta property="og:description" content="Description of your page" />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1698046828316-9219096ab432?auto=format&fit=crop&q=80&w=1636&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+        <meta
+          property="og:url"
+          content="https://images.unsplash.com/photo-1698046828316-9219096ab432?auto=format&fit=crop&q=80&w=1636&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
       </Head>
       <main className="container mx-auto">
         <Banner />
