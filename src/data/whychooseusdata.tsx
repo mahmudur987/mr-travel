@@ -7,7 +7,7 @@ export const ChooseData = [
       "https://w7.pngwing.com/pngs/534/388/png-transparent-hotel-hotel-facilities-icon.png",
   },
   {
-    heading: "World Class sertvices",
+    heading: "World Class Services",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis sapien in blandit dictum. Maecenas ullamcorper, augue vel faucibus porttitor, dolor turpis semper nulla, et rutrum tortor velit in arcu. Suspendisse eu posuere elit. Sed eget quam nec turpis efficitur feugiat. Integer et dui eu ligula vestibulum faucibus. Fusce id urna lorem. Nam eu nulla odio. Maecenas euismod lectus felis, in pharetra nisi efficitur eget. Integer suscipit felis et risus lacinia ultricies. Nulla tincidunt sit amet ex vel bibendum. Aliquam sit amet urna quis massa vestibulum fermentum. Aliquam a congue nibh.",
     imageUrl: "https://cdn-icons-png.flaticon.com/512/2072/2072130.png",

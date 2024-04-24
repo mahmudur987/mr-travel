@@ -12,7 +12,7 @@ const PlaceGallery: React.FC = () => {
   const [places, setPlaces] = useState<Place[]>(placesData);
 
   return (
-    <div className="grid gap-4 my-10 max-w-7xl mx-auto">
+    <div className="grid gap-4 my-10 max-w-7xl mx-auto w-full">
       <div className=" flex flex-col items-center justify-center">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2">
           Popular Destinations
